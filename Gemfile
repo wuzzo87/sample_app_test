@@ -3,12 +3,19 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.12'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
-gem 'sqlite3', '1.3.4'
 
 group :development do
+  gem 'taps'
+  gem 'rvm'
   gem 'rspec-rails', '2.6.1'
   gem 'annotate', '2.4.0'
   gem 'faker', '0.3.1'
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
+end
+
+group :production do
+  gem 'therubyracer', '~> 0.9.3.beta1' 
+  gem 'pg'
 end
 
 group :test do
